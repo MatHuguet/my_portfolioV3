@@ -7,9 +7,9 @@
   color: var(--fontColor);
 
   // COLORS CUSTOM PROPERTIES :
-  --bodyColor: #fff;
+  --bodyColor: rgb(1, 84, 41);
 
-  --fontColor: #000;
+  --fontColor: rgb(255, 255, 255);
 }
 
 //------GENERAL
@@ -22,15 +22,14 @@ a {
 //------DISPLAY
 
 body {
-  background-color: #3f3e3f;
-  padding: 1rem;
+  background-color: #022512;
 }
 
 .main-container {
   background-color: var(--bodyColor);
   // border: double 2px blueviolet;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   //Layout
   display: grid;
   grid-template-areas:
@@ -50,6 +49,16 @@ body {
   grid-area: "m";
 }
 
+.main-img {
+  // border: solid 1px red;
+  width: 100%;
+}
+
+.work-room {
+  width: 100%;
+  margin-top: 10rem;
+}
+
 .footer {
   grid-area: "f";
 }
@@ -66,7 +75,7 @@ body {
 }
 
 .hamburger {
-  position: fixed;
+  position: sticky;
   // border: solid 1px orangered;
   height: 30px;
   width: 30px;
