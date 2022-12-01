@@ -13,14 +13,14 @@ const picture = document.querySelector(".work-room");
 
 const options = {
   root: null,
-  threshold: 0.44,
-  rootMargin: "25px",
+  threshold: 0,
+  rootMargin: "-100px",
 };
 // const topNav = window.addEventListener("scroll", (e) => {});
 // console.log(window.scrollY);
 const observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {
-    console.log(entry.isIntersecting);
+    // console.log(entry.isIntersecting);
     // entry.target.classList.toggle("fixedNav");
     if (!entry.isIntersecting) {
       navBar.classList.toggle("navTopAnimation");
