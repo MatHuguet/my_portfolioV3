@@ -24,14 +24,10 @@ a {
   color: var(--fontColor);
 }
 
-p {
-  padding: 0 10rem;
-}
-
 //------DISPLAY
 
 .main-container {
-  margin: 10px;
+  margin: 0;
   padding: 0;
   background-color: #0c221a;
   // border: double 2px blueviolet;
@@ -48,20 +44,24 @@ p {
 .header {
   // border: solid 1px green;
   grid-area: "h";
-  // height: 20vh;
 }
 
 .main {
   grid-area: "m";
 }
 
+.deskPicContainer {
+  border: solid 1px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .work-room {
   // border: 1px solid blue;
   display: flex;
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  padding: 1rem;
+  // padding: 3rem 5rem;
+  width: 16rem;
 }
 
 .footer {

@@ -18,12 +18,8 @@ a {
   color: var(--fontColor);
 }
 
-p {
-  padding: 0 10rem;
-}
-
 .main-container {
-  margin: 10px;
+  margin: 0;
   padding: 0;
   background-color: #0c221a;
   height: 100vh;
@@ -40,12 +36,16 @@ p {
   grid-area: "m";
 }
 
+.deskPicContainer {
+  border: solid 1px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .work-room {
   display: flex;
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  padding: 1rem;
+  width: 16rem;
 }
 
 .footer {
