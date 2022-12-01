@@ -19,7 +19,7 @@ a {
 }
 
 p {
-  padding: 0 2rem;
+  padding: 0 10rem;
 }
 
 .main-container {
@@ -53,17 +53,34 @@ p {
 }
 
 .nav {
+  transition: 0.6s ease;
   z-index: 0;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 6rem;
+  padding-right: 2rem;
+  transform: translateY(-2rem);
+  background-color: #0c221a;
+}
+
+.navTopAnimation {
+  transition: 0.6s ease;
+  z-index: 0;
+  position: fixed;
+  display: flex;
+  justify-content: end;
   align-items: center;
   width: 100%;
   margin-bottom: 4rem;
+  padding-right: 2rem;
+  transform: translateY(-35rem);
 }
 
 .hamburger {
+  transition: 0.6s ease;
   z-index: 2;
   position: absolute;
   margin-top: 3rem;
