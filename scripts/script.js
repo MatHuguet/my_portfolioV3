@@ -14,7 +14,7 @@ const picture = document.querySelector(".work-room");
 const options = {
   root: null,
   threshold: 0,
-  rootMargin: "-100px",
+  rootMargin: "66px",
 };
 // const topNav = window.addEventListener("scroll", (e) => {});
 // console.log(window.scrollY);
