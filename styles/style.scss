@@ -9,6 +9,10 @@
   --bodyColor: #fff;
 
   --fontColor: rgb(255, 255, 255);
+
+  // SIZES CUSTOM PROPERTIES :
+  --sizeMainPic: clamp(min(16rem), 80vw, max(40vw));
+  --sizeTitles: clamp(min(2rem), 3rem, max(25rem));
 }
 
 //------GENERAL
@@ -48,31 +52,44 @@ a {
 
 .main {
   grid-area: "m";
+  margin-top: 4rem;
 }
 
 .deskPicContainer {
-  border: solid 1px red;
+  // border: solid 1px red;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .work-room {
   // border: 1px solid blue;
   display: flex;
   // padding: 3rem 5rem;
-  width: 16rem;
+  width: var(--sizeMainPic);
 }
 
 .footer {
   grid-area: "f";
 }
 
+// -----------CONTENT------
+
+h1 {
+  transition: 0.4s ease;
+  text-align: center;
+  font-size: var(--sizeTitles);
+  margin: 2rem;
+}
+
 // -----------NAVIGATION
 
 .nav {
   // border: solid 1px red;
-  transition: 0.6s ease;
+  transition: 0.2s ease;
   z-index: 0;
   position: relative;
   display: flex;
@@ -80,24 +97,27 @@ a {
   align-items: center;
   width: 100%;
   height: 6rem;
-  transform: translateY(0);
+  transform: translateY(1px);
   // margin-bottom: 10rem;
   // padding-right: 2rem;
   // top: 0;
-  background-color: #0c221a;
+  // background-color: #0c221a;
+  opacity: 1;
 }
 //TODO fix hamburger height on @media screen > 600px
 .navTopAnimation {
-  transition: 0.6s ease;
+  transition: 0.2s ease-in;
   z-index: 0;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  top: 0;
-  transform: translateY(0);
+  height: 6rem;
   // top: 0;
+  transform: translateY(-24rem);
+  background-color: #0c221a;
+  border-bottom: solid 1px #173f31;
 }
 
 .hamburger {
