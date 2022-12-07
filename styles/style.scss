@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-
+  padding: 0;
+  margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
   color: var(--fontColor);
@@ -36,7 +37,7 @@ a {
   background-color: #0c221a;
   // border: double 2px blueviolet;
   height: 100vh;
-  width: 95vw;
+  width: 100vw;
   //Layout
   display: grid;
   grid-template-areas:
@@ -46,21 +47,24 @@ a {
 }
 
 .header {
-  // border: solid 1px green;
   grid-area: "h";
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .main {
   grid-area: "m";
+  width: 100vw;
   margin-top: 4rem;
+  padding: 0;
 }
 
 .deskPicContainer {
-  // border: solid 1px red;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
@@ -68,7 +72,8 @@ a {
 .work-room {
   // border: 1px solid blue;
   display: flex;
-  // padding: 3rem 5rem;
+  padding: 0;
+  margin: 0;
   width: var(--sizeMainPic);
 }
 
@@ -88,7 +93,6 @@ h1 {
 // -----------NAVIGATION
 
 .nav {
-  // border: solid 1px red;
   transition: 0.2s ease;
   z-index: 0;
   position: relative;
