@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Rubik+Marker+Hatch&family=Ubuntu&display=swap");
+
 * {
   // box-sizing: border-box;
   padding: 0;
@@ -14,6 +16,11 @@
   // SIZES CUSTOM PROPERTIES :
   --sizeMainPic: clamp(min(16rem), 80vw, max(40vw));
   --sizeTitles: clamp(min(2rem), 3rem, max(25rem));
+
+  //FONTS :
+  --ffPlayfair: "Playfair Display", serif;
+  --ffRubik: "Rubik Marker Hatch", cursive;
+  --ffUbuntu: "Ubuntu", sans-serif;
 }
 
 //------GENERAL
@@ -75,10 +82,13 @@ main {
 // -----------CONTENT------
 
 h1 {
-  transition: 0.4s ease;
+  transition: 0.5s ease;
   text-align: center;
   font-size: var(--sizeTitles);
-  margin: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  font-family: var(--ffPlayfair);
+  letter-spacing: 4px;
 }
 
 // -----------NAVIGATION
@@ -111,31 +121,137 @@ h1 {
   border-bottom: solid 1px #173f31;
 }
 
-.hamburger {
-  transition: 0.6s ease;
-  z-index: 2;
-  position: absolute;
-  margin-top: 3rem;
-  height: 2rem;
-  width: 2rem;
-  cursor: pointer;
-  margin-bottom: 3rem;
-}
+// .hamburger {
+//   transition: 0.6s ease;
+//   z-index: 2;
+//   position: absolute;
+//   margin-top: 3rem;
+//   height: 8rem;
+//   width: 100%;
+//   cursor: pointer;
+//   margin-bottom: 3rem;
+// }
 
 .top-line {
   position: absolute;
-  top: 8px;
-  width: 100%;
+
+  top: 2.5rem;
+  left: 45%;
+  width: 2rem;
   height: 4px;
   background-color: #fff;
+  // animation-duration: 1s;
+  // animation-name: "topLine";
+  // animation-direction: normal;
+  // animation-fill-mode: forwards;
+}
+
+.top-line-anim::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  width: 2rem;
+  height: 10px;
+  top: 10px;
+  background-color: red;
 }
 
 .bottom-line {
   position: absolute;
   bottom: 8px;
-  width: 100%;
+  right: 55%;
+  width: 2rem;
   height: 4px;
   background-color: #fff;
+}
+
+.bottom-line-anim::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  width: 2rem;
+  height: 10px;
+  top: 10px;
+  background-color: red;
+}
+
+//=====HAM ANIMATION ON CLICK=========
+
+.top-line-anim {
+  position: absolute;
+  animation-duration: 1s;
+  animation-name: "topLine";
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  .top-line-anim::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 10px;
+    top: 10px;
+    background-color: red;
+  }
+}
+
+.bottom-line-anim {
+  position: absolute;
+  animation-duration: 1s;
+  animation-name: "bottomLine";
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes topLine {
+  0% {
+    top: 2.5rem;
+    left: 45%;
+    width: 2rem;
+  }
+
+  50% {
+    left: 50%;
+    rotate: 90deg;
+    width: 8rem;
+  }
+
+  65% {
+    left: 50%;
+    rotate: 90deg;
+    width: 8rem;
+  }
+
+  100% {
+    top: 3.8rem;
+    left: 96%;
+    rotate: 90deg;
+    width: 8rem;
+  }
+}
+
+@keyframes bottomLine {
+  0% {
+    bottom: 8px;
+    left: 45%;
+    width: 2rem;
+  }
+
+  50% {
+    left: 40%;
+    rotate: 90deg;
+    width: 8rem;
+  }
+  65% {
+    left: 40%;
+    rotate: 90deg;
+    width: 8rem;
+  }
+
+  100% {
+    left: 1%;
+    rotate: 90deg;
+    bottom: 4rem;
+    width: 8rem;
+  }
 }
 
 // NAVIGATION ON CLICK HAMBURGER MOBILE + DESKTOP

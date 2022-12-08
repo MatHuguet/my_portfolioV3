@@ -1,10 +1,13 @@
-// //---HAMBURGER TOGGLE MENU
-// const hamburger = document.querySelector(".hamburger");
-// const navItems = document.querySelector(".nav-item");
+//---HAMBURGER TOGGLE MENU
+const hamburger = document.querySelector(".hamburger");
+const navItems = document.querySelector(".nav-item");
+const topLine = document.querySelector(".top-line");
+const bottomLine = document.querySelector(".bottom-line");
 
-// hamburger.addEventListener("click", () => {
-//   console.log("click");
-// });
+hamburger.addEventListener("click", () => {
+  topLine.classList.toggle("top-line-anim");
+  bottomLine.classList.toggle("bottom-line-anim");
+});
 
 //---STICKY-NAV
 
