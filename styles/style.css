@@ -4,8 +4,8 @@
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
-  --bodyColor: #fff;
-  --fontColor: rgb(255, 255, 255);
+  --fontColor-creamWhite: #f0e6da;
+  --fontColor-greenbrown: #4c4b34;
   --sizeMainPic: clamp(min(16rem), 80vw, max(40vw));
   --sizeTitles: clamp(min(2rem), 3rem, max(25rem));
   --ffPlayfair: "Playfair Display", serif;
@@ -18,11 +18,6 @@ body {
   margin: 0;
   height: 100%;
   background-color: #0c221a;
-}
-
-a {
-  z-index: 3;
-  text-decoration: none;
 }
 
 a:visited {
@@ -180,12 +175,21 @@ h1 {
   top: 5.5rem;
 }
 
+.links {
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.links-toggle {
+  transition: 0.3s ease;
+  color: white;
+}
+
 .nav-item {
   width: 3rem;
   z-index: -50;
   transition: 0.1s ease;
   text-align: center;
-  color: rgba(0, 169, 101, 0);
   text-decoration: none;
 }
 
@@ -193,5 +197,4 @@ h1 {
   z-index: -2;
   transition: 0.1s ease-in;
   text-align: center;
-  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */

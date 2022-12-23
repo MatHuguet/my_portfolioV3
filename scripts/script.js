@@ -3,11 +3,13 @@ const hamburger = document.querySelector(".hamburger");
 const navList = document.querySelector(".nav-list");
 const navItems = document.querySelector(".nav-item");
 const bottomLine = document.querySelector(".bottom-line");
+const links = document.querySelector(".links");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("ham-anim");
   navList.classList.toggle("nav-list-toggle");
   navItems.classList.toggle("nav-item-toggle");
+  links.classList.toggle("links-toggle");
 });
 
 //---STICKY-NAV

@@ -8,9 +8,9 @@
   font-size: 18px;
 
   // COLORS CUSTOM PROPERTIES :
-  --bodyColor: #fff;
 
-  --fontColor: rgb(255, 255, 255);
+  --fontColor-creamWhite: #f0e6da;
+  --fontColor-greenbrown: #4c4b34;
 
   // SIZES CUSTOM PROPERTIES :
   --sizeMainPic: clamp(min(16rem), 80vw, max(40vw));
@@ -31,10 +31,10 @@ body {
   background-color: #0c221a;
 }
 
-a {
-  z-index: 3;
-  text-decoration: none;
-}
+// a {
+//   z-index: 3;
+//   text-decoration: none;
+// }
 
 a:visited {
   color: white;
@@ -206,12 +206,21 @@ h1 {
   top: 5.5rem;
 }
 
+.links {
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.links-toggle {
+  transition: 0.3s ease;
+  color: white;
+}
+
 .nav-item {
   width: 3rem;
   z-index: -50;
   transition: 0.1s ease;
   text-align: center;
-  color: #00a96500;
   text-decoration: none;
 }
 
@@ -219,7 +228,6 @@ h1 {
   z-index: -2;
   transition: 0.1s ease-in;
   text-align: center;
-  color: rgb(255, 255, 255);
 }
 
 //---HAMBURGER-ANIM---------
