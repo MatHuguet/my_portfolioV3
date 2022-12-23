@@ -6,6 +6,7 @@
   font-size: 18px;
   --fontColor-creamWhite: #f0e6da;
   --fontColor-greenbrown: #4c4b34;
+  --body_fontColor-softBrown: #c4b0a0;
   --sizeMainPic: clamp(min(16rem), 80vw, max(40vw));
   --sizeTitles: clamp(min(2rem), 3rem, max(25rem));
   --ffPlayfair: "Playfair Display", serif;
@@ -18,10 +19,6 @@ body {
   margin: 0;
   height: 100%;
   background-color: #0c221a;
-}
-
-a:visited {
-  color: white;
 }
 
 .main-container {
@@ -146,6 +143,10 @@ h1 {
   rotate: z -45deg;
 }
 
+a:visited {
+  color: rgba(9, 24, 18, 0);
+}
+
 .nav-list {
   z-index: 2;
   position: absolute;
@@ -174,14 +175,7 @@ h1 {
   height: 3rem;
   top: 5.5rem;
 }
-
-.links {
-  transition: 0.3s ease;
-  text-decoration: none;
-}
-
-.links-toggle {
-  transition: 0.3s ease;
+.nav-list-toggle a {
   color: white;
 }
 
@@ -190,11 +184,13 @@ h1 {
   z-index: -50;
   transition: 0.1s ease;
   text-align: center;
-  text-decoration: none;
 }
 
 .nav-item-toggle {
   z-index: -2;
-  transition: 0.1s ease-in;
+  transition: 0.3s ease-in;
   text-align: center;
+}
+.nav-item-toggle a:visited {
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */

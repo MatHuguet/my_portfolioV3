@@ -12,6 +12,8 @@
   --fontColor-creamWhite: #f0e6da;
   --fontColor-greenbrown: #4c4b34;
 
+  --body_fontColor-softBrown: #c4b0a0;
+
   // SIZES CUSTOM PROPERTIES :
   --sizeMainPic: clamp(min(16rem), 80vw, max(40vw));
   --sizeTitles: clamp(min(2rem), 3rem, max(25rem));
@@ -36,9 +38,9 @@ body {
 //   text-decoration: none;
 // }
 
-a:visited {
-  color: white;
-}
+// a:visited {
+//   color: white;
+// }
 
 //------DISPLAY
 
@@ -173,6 +175,9 @@ h1 {
   }
 }
 
+a:visited {
+  color: #09181200;
+}
 // NAVIGATION ON CLICK HAMBURGER MOBILE + DESKTOP
 //TODO SET THE ANIMATION HAMBURGER ON CLICK
 //TODO SET NAV ITEMS DISPLAY ON CLICK
@@ -204,30 +209,31 @@ h1 {
   width: 100%;
   height: 3rem;
   top: 5.5rem;
+  a {
+    color: white;
+  }
 }
 
-.links {
-  transition: 0.3s ease;
-  text-decoration: none;
-}
-
-.links-toggle {
-  transition: 0.3s ease;
-  color: white;
-}
+// .contact > a,
+// .galerie > a {
+//   color: rgb(255, 255, 255);
+// }
 
 .nav-item {
   width: 3rem;
   z-index: -50;
   transition: 0.1s ease;
   text-align: center;
-  text-decoration: none;
 }
 
 .nav-item-toggle {
   z-index: -2;
-  transition: 0.1s ease-in;
+  transition: 0.3s ease-in;
   text-align: center;
+  a:visited {
+    // color: white;
+    visibility: visible;
+  }
 }
 
 //---HAMBURGER-ANIM---------
