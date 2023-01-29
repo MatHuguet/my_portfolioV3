@@ -241,7 +241,26 @@ a:visited {
   }
   li {
     margin: 1rem 2rem;
+    width: auto;
+  }
+  a {
+    text-decoration: none;
+    color: white;
     font-size: 1.4rem;
     font-weight: 600;
+  }
+  a:hover {
+    text-decoration: underline;
+    transition: 0.4s ease;
+  }
+  a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  a:visited:hover {
+    text-decoration: underline;
+    transition: 0.4s ease;
   }
 }/*# sourceMappingURL=style.css.map */
