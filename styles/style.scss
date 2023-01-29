@@ -38,9 +38,9 @@ body {
 //   text-decoration: none;
 // }
 
-// a:visited {
-//   color: white;
-// }
+a:visited {
+  color: white;
+}
 
 //------DISPLAY
 
@@ -125,25 +125,25 @@ h1 {
 .hamburger {
   transition: 0.3s ease;
   cursor: pointer;
-  width: 4rem;
-  height: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   .top-line {
     transition: 0.3s ease;
-    height: 4px;
-    width: 2rem;
+    height: 3px;
+    width: 1.4rem;
     background-color: #fff;
-    transform: translate(1rem, -0.5rem);
+    transform: translate(0.5rem, -0.4rem);
     rotate: 0;
   }
   .bottom-line {
     transition: 0.3s ease;
-    height: 4px;
-    width: 2rem;
+    height: 3px;
+    width: 1.4rem;
     background-color: #fff;
-    transform: translate(-1rem, 0.5rem);
+    transform: translate(-0.8rem, 0.4rem);
     rotate: 0;
   }
 }
@@ -159,18 +159,18 @@ h1 {
   // transform: translateX(2rem);
   .top-line {
     transition: 0.3s ease;
-    height: 4px;
-    width: 2rem;
+    height: 3px;
+    width: 1.4rem;
     background-color: #fff;
-    transform: translate(0.7rem, -0.7rem);
+    transform: translate(0.48rem, -0.48rem);
     rotate: z 45deg;
   }
   .bottom-line {
     transition: 0.3s ease;
-    height: 4px;
-    width: 2rem;
+    height: 3px;
+    width: 1.4rem;
     background-color: #fff;
-    transform: translate(-0.7rem, -0.7rem);
+    transform: translate(-0.48rem, -0.48rem);
     rotate: z -45deg;
   }
 }
@@ -227,6 +227,63 @@ a:visited {
   text-align: center;
 }
 
+.navlist-queries-sup {
+  display: none;
+}
+
 //---HAMBURGER-ANIM---------
 
 //-------------TABLET---760px---------
+
+@media screen and (min-width: 768px) {
+  .hamburger,
+  .nav-list,
+  .nav-list-toggle,
+  .nav-item,
+  .nav-item-toggle,
+  #nav-list {
+    display: none;
+  }
+
+  .nav {
+    z-index: 10;
+    background-color: #0c221a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 4.5rem;
+    width: 100%;
+    // position: fixed;
+    padding-top: 1rem;
+    box-shadow: 2px 3px 12px 3px black;
+  }
+
+  .logo {
+    background-color: #0c221a;
+    width: 4rem;
+    height: 4rem;
+    margin-left: 2rem;
+  }
+
+  .logo > img {
+    width: 100%;
+  }
+
+  .menu-desktop {
+    margin-left: 4rem;
+    width: 100%;
+  }
+
+  .navlist-queries-sup {
+    z-index: 15;
+    display: flex;
+    list-style-type: none;
+    color: var(--fontColor-creamWhite);
+  }
+
+  li {
+    margin: 1rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
